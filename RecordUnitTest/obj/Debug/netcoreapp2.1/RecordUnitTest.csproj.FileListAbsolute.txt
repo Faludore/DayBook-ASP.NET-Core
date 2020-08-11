@@ -1,0 +1,17 @@
+D:\ToWork\vsProjects\WebApiAngularIdentity\RecordUnitTest\bin\Debug\netcoreapp2.1\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+D:\ToWork\vsProjects\WebApiAngularIdentity\RecordUnitTest\bin\Debug\netcoreapp2.1\xunit.runner.reporters.netcoreapp10.dll
+D:\ToWork\vsProjects\WebApiAngularIdentity\RecordUnitTest\bin\Debug\netcoreapp2.1\xunit.runner.utility.netcoreapp10.dll
+D:\ToWork\vsProjects\WebApiAngularIdentity\RecordUnitTest\bin\Debug\netcoreapp2.1\RecordUnitTest.deps.json
+D:\ToWork\vsProjects\WebApiAngularIdentity\RecordUnitTest\bin\Debug\netcoreapp2.1\RecordUnitTest.runtimeconfig.json
+D:\ToWork\vsProjects\WebApiAngularIdentity\RecordUnitTest\bin\Debug\netcoreapp2.1\RecordUnitTest.runtimeconfig.dev.json
+D:\ToWork\vsProjects\WebApiAngularIdentity\RecordUnitTest\bin\Debug\netcoreapp2.1\RecordUnitTest.dll
+D:\ToWork\vsProjects\WebApiAngularIdentity\RecordUnitTest\obj\Debug\netcoreapp2.1\RecordUnitTest.csprojAssemblyReference.cache
+D:\ToWork\vsProjects\WebApiAngularIdentity\RecordUnitTest\obj\Debug\netcoreapp2.1\RecordUnitTest.csproj.CoreCompileInputs.cache
+D:\ToWork\vsProjects\WebApiAngularIdentity\RecordUnitTest\obj\Debug\netcoreapp2.1\RecordUnitTest.AssemblyInfoInputs.cache
+D:\ToWork\vsProjects\WebApiAngularIdentity\RecordUnitTest\obj\Debug\netcoreapp2.1\RecordUnitTest.AssemblyInfo.cs
+D:\ToWork\vsProjects\WebApiAngularIdentity\RecordUnitTest\bin\Debug\netcoreapp2.1\WebApiAngularIdentity.dll
+D:\ToWork\vsProjects\WebApiAngularIdentity\RecordUnitTest\bin\Debug\netcoreapp2.1\WebApiAngularIdentity.pdb
+D:\ToWork\vsProjects\WebApiAngularIdentity\RecordUnitTest\obj\Debug\netcoreapp2.1\RecordUnitTest.csproj.CopyComplete
+D:\ToWork\vsProjects\WebApiAngularIdentity\RecordUnitTest\bin\Debug\netcoreapp2.1\RecordUnitTest.pdb
+D:\ToWork\vsProjects\WebApiAngularIdentity\RecordUnitTest\obj\Debug\netcoreapp2.1\RecordUnitTest.dll
+D:\ToWork\vsProjects\WebApiAngularIdentity\RecordUnitTest\obj\Debug\netcoreapp2.1\RecordUnitTest.pdb

@@ -1,0 +1,14 @@
+D:\ToWork\vsProjects\WebApiAngularIdentity\WebApiAngularIdentity\obj\Debug\netcoreapp2.1\WebApiAngularIdentity.csproj.CoreCompileInputs.cache
+D:\ToWork\vsProjects\WebApiAngularIdentity\WebApiAngularIdentity\obj\Debug\netcoreapp2.1\WebApiAngularIdentity.RazorAssemblyInfo.cache
+D:\ToWork\vsProjects\WebApiAngularIdentity\WebApiAngularIdentity\obj\Debug\netcoreapp2.1\WebApiAngularIdentity.RazorAssemblyInfo.cs
+D:\ToWork\vsProjects\WebApiAngularIdentity\WebApiAngularIdentity\obj\Debug\netcoreapp2.1\WebApiAngularIdentity.AssemblyInfoInputs.cache
+D:\ToWork\vsProjects\WebApiAngularIdentity\WebApiAngularIdentity\obj\Debug\netcoreapp2.1\WebApiAngularIdentity.AssemblyInfo.cs
+D:\ToWork\vsProjects\WebApiAngularIdentity\WebApiAngularIdentity\obj\Debug\netcoreapp2.1\WebApiAngularIdentity.csprojAssemblyReference.cache
+D:\ToWork\vsProjects\WebApiAngularIdentity\WebApiAngularIdentity\bin\Debug\netcoreapp2.1\WebApiAngularIdentity.deps.json
+D:\ToWork\vsProjects\WebApiAngularIdentity\WebApiAngularIdentity\bin\Debug\netcoreapp2.1\WebApiAngularIdentity.runtimeconfig.json
+D:\ToWork\vsProjects\WebApiAngularIdentity\WebApiAngularIdentity\bin\Debug\netcoreapp2.1\WebApiAngularIdentity.runtimeconfig.dev.json
+D:\ToWork\vsProjects\WebApiAngularIdentity\WebApiAngularIdentity\bin\Debug\netcoreapp2.1\WebApiAngularIdentity.dll
+D:\ToWork\vsProjects\WebApiAngularIdentity\WebApiAngularIdentity\bin\Debug\netcoreapp2.1\WebApiAngularIdentity.pdb
+D:\ToWork\vsProjects\WebApiAngularIdentity\WebApiAngularIdentity\obj\Debug\netcoreapp2.1\WebApiAngularIdentity.RazorTargetAssemblyInfo.cache
+D:\ToWork\vsProjects\WebApiAngularIdentity\WebApiAngularIdentity\obj\Debug\netcoreapp2.1\WebApiAngularIdentity.dll
+D:\ToWork\vsProjects\WebApiAngularIdentity\WebApiAngularIdentity\obj\Debug\netcoreapp2.1\WebApiAngularIdentity.pdb
