@@ -12,3 +12,6 @@ D:\ToWork\vsProjects\WebApiAngularIdentity\WebApiAngularIdentity\bin\Debug\netco
 D:\ToWork\vsProjects\WebApiAngularIdentity\WebApiAngularIdentity\obj\Debug\netcoreapp2.1\WebApiAngularIdentity.RazorTargetAssemblyInfo.cache
 D:\ToWork\vsProjects\WebApiAngularIdentity\WebApiAngularIdentity\obj\Debug\netcoreapp2.1\WebApiAngularIdentity.dll
 D:\ToWork\vsProjects\WebApiAngularIdentity\WebApiAngularIdentity\obj\Debug\netcoreapp2.1\WebApiAngularIdentity.pdb
+D:\ToWork\vsProjects\WebApiAngularIdentity\WebApiAngularIdentity\bin\Debug\netcoreapp2.1\DataAccessLibary.dll
+D:\ToWork\vsProjects\WebApiAngularIdentity\WebApiAngularIdentity\bin\Debug\netcoreapp2.1\DataAccessLibary.pdb
+D:\ToWork\vsProjects\WebApiAngularIdentity\WebApiAngularIdentity\obj\Debug\netcoreapp2.1\WebApiAngularIdentity.csproj.CopyComplete

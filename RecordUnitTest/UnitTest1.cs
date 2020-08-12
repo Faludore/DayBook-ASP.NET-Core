@@ -2,12 +2,13 @@ using Microsoft.AspNetCore.Identity;
 using Moq;
 using System;
 using WebApiAngularIdentity.Controllers;
-using WebApiAngularIdentity.Models;
+using DataAccessLibary.Models;
+using DataAccessLibary.DataAccess;
 using Xunit;
 using Microsoft.AspNetCore.Mvc.Core;
 using System.Linq;
 using System.Collections.Generic;
-using Record = WebApiAngularIdentity.Models.Record;
+using Record = DataAccessLibary.Models.Record;
 
 namespace RecordUnitTest
 {

@@ -15,3 +15,5 @@ D:\ToWork\vsProjects\WebApiAngularIdentity\RecordUnitTest\obj\Debug\netcoreapp2.
 D:\ToWork\vsProjects\WebApiAngularIdentity\RecordUnitTest\bin\Debug\netcoreapp2.1\RecordUnitTest.pdb
 D:\ToWork\vsProjects\WebApiAngularIdentity\RecordUnitTest\obj\Debug\netcoreapp2.1\RecordUnitTest.dll
 D:\ToWork\vsProjects\WebApiAngularIdentity\RecordUnitTest\obj\Debug\netcoreapp2.1\RecordUnitTest.pdb
+D:\ToWork\vsProjects\WebApiAngularIdentity\RecordUnitTest\bin\Debug\netcoreapp2.1\DataAccessLibary.dll
+D:\ToWork\vsProjects\WebApiAngularIdentity\RecordUnitTest\bin\Debug\netcoreapp2.1\DataAccessLibary.pdb

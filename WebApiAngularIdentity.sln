@@ -5,7 +5,9 @@ VisualStudioVersion = 15.0.28307.852
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApiAngularIdentity", "WebApiAngularIdentity\WebApiAngularIdentity.csproj", "{FDBF1611-F4B3-405A-90E0-1DEDEDCEF2FF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecordUnitTest", "RecordUnitTest\RecordUnitTest.csproj", "{6AD854CA-2408-4E06-95E9-B161999311B7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RecordUnitTest", "RecordUnitTest\RecordUnitTest.csproj", "{6AD854CA-2408-4E06-95E9-B161999311B7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessLibary", "DataAccessLibary\DataAccessLibary.csproj", "{46FB894F-18EA-400F-A503-FCA6D86B498A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{6AD854CA-2408-4E06-95E9-B161999311B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6AD854CA-2408-4E06-95E9-B161999311B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6AD854CA-2408-4E06-95E9-B161999311B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46FB894F-18EA-400F-A503-FCA6D86B498A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46FB894F-18EA-400F-A503-FCA6D86B498A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46FB894F-18EA-400F-A503-FCA6D86B498A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46FB894F-18EA-400F-A503-FCA6D86B498A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,9 @@
+D:\ToWork\vsProjects\WebApiAngularIdentity\DataAccessLibary\bin\Debug\netstandard2.0\DataAccessLibary.deps.json
+D:\ToWork\vsProjects\WebApiAngularIdentity\DataAccessLibary\bin\Debug\netstandard2.0\DataAccessLibary.dll
+D:\ToWork\vsProjects\WebApiAngularIdentity\DataAccessLibary\obj\Debug\netstandard2.0\DataAccessLibary.csprojAssemblyReference.cache
+D:\ToWork\vsProjects\WebApiAngularIdentity\DataAccessLibary\obj\Debug\netstandard2.0\DataAccessLibary.csproj.CoreCompileInputs.cache
+D:\ToWork\vsProjects\WebApiAngularIdentity\DataAccessLibary\obj\Debug\netstandard2.0\DataAccessLibary.AssemblyInfoInputs.cache
+D:\ToWork\vsProjects\WebApiAngularIdentity\DataAccessLibary\obj\Debug\netstandard2.0\DataAccessLibary.AssemblyInfo.cs
+D:\ToWork\vsProjects\WebApiAngularIdentity\DataAccessLibary\bin\Debug\netstandard2.0\DataAccessLibary.pdb
+D:\ToWork\vsProjects\WebApiAngularIdentity\DataAccessLibary\obj\Debug\netstandard2.0\DataAccessLibary.dll
+D:\ToWork\vsProjects\WebApiAngularIdentity\DataAccessLibary\obj\Debug\netstandard2.0\DataAccessLibary.pdb

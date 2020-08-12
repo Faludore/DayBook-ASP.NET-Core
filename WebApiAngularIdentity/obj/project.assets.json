@@ -4953,6 +4953,20 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
         }
+      },
+      "DataAccessLibary/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "2.1.0",
+          "Microsoft.EntityFrameworkCore.SqlServer": "2.1.2"
+        },
+        "compile": {
+          "bin/placeholder/DataAccessLibary.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DataAccessLibary.dll": {}
+        }
       }
     }
   },
@@ -13442,10 +13456,16 @@
         "system.xml.xpath.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xpath.xdocument.nuspec"
       ]
+    },
+    "DataAccessLibary/1.0.0": {
+      "type": "project",
+      "path": "../DataAccessLibary/DataAccessLibary.csproj",
+      "msbuildProject": "../DataAccessLibary/DataAccessLibary.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
+      "DataAccessLibary >= 1.0.0",
       "FluentValidation.AspNetCore >= 9.1.1",
       "Magick.NET-Q8-AnyCPU >= 7.20.0.1",
       "MailKit >= 2.7.0",
@@ -13488,7 +13508,11 @@
       },
       "frameworks": {
         "netcoreapp2.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\ToWork\\vsProjects\\WebApiAngularIdentity\\DataAccessLibary\\DataAccessLibary.csproj": {
+              "projectPath": "D:\\ToWork\\vsProjects\\WebApiAngularIdentity\\DataAccessLibary\\DataAccessLibary.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

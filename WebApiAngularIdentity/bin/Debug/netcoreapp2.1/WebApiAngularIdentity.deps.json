@@ -24,6 +24,7 @@
     ".NETCoreApp,Version=v2.1": {
       "WebApiAngularIdentity/1.0.0": {
         "dependencies": {
+          "DataAccessLibary": "1.0.0",
           "FluentValidation.AspNetCore": "9.1.1",
           "Magick.NET-Q8-AnyCPU": "7.20.0.1",
           "MailKit": "2.7.0",
@@ -1044,6 +1045,18 @@
         "dependencies": {
           "System.Runtime": "4.3.0",
           "System.Runtime.Handles": "4.3.0"
+        }
+      },
+      "DataAccessLibary/1.0.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "2.1.1",
+          "Microsoft.EntityFrameworkCore.SqlServer": "2.1.2"
+        },
+        "runtime": {
+          "DataAccessLibary.dll": {}
+        },
+        "compile": {
+          "DataAccessLibary.dll": {}
         }
       },
       "Microsoft.AspNet.WebApi.Client/5.2.6": {
@@ -4316,6 +4329,11 @@
       "sha512": "sha512-k/+g4b7vjdd4aix83sTgC9VG6oXYKAktSfNIJUNGxPEj7ryEOfzHHhfnmsZvjxawwcD9HyWXKCXmPjX8U4zeSw==",
       "path": "system.threading.threadpool/4.3.0",
       "hashPath": "system.threading.threadpool.4.3.0.nupkg.sha512"
+    },
+    "DataAccessLibary/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "Microsoft.AspNet.WebApi.Client/5.2.6": {
       "type": "package",

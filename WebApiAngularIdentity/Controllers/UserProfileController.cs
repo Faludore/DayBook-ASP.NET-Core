@@ -8,7 +8,8 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using WebApiAngularIdentity.Models;
+using DataAccessLibary.Models;
+using DataAccessLibary.DataAccess;
 
 using System.Web;
 using System.Web.Http;

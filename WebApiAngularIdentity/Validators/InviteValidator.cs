@@ -3,7 +3,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using WebApiAngularIdentity.Models;
+using DataAccessLibary.Models;
+using DataAccessLibary.DataAccess;
 
 namespace WebApiAngularIdentity.Validators
 {

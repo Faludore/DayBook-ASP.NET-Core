@@ -4024,10 +4024,25 @@
           "build/netcoreapp1.0/xunit.runner.visualstudio.props": {}
         }
       },
+      "DataAccessLibary/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "2.1.0",
+          "Microsoft.EntityFrameworkCore.SqlServer": "2.1.2"
+        },
+        "compile": {
+          "bin/placeholder/DataAccessLibary.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DataAccessLibary.dll": {}
+        }
+      },
       "WebApiAngularIdentity/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.1",
         "dependencies": {
+          "DataAccessLibary": "1.0.0",
           "FluentValidation.AspNetCore": "9.1.1",
           "Magick.NET-Q8-AnyCPU": "7.20.0.1",
           "MailKit": "2.7.0",
@@ -11816,6 +11831,11 @@
         "xunit.runner.visualstudio.2.4.0.nupkg.sha512",
         "xunit.runner.visualstudio.nuspec"
       ]
+    },
+    "DataAccessLibary/1.0.0": {
+      "type": "project",
+      "path": "../DataAccessLibary/DataAccessLibary.csproj",
+      "msbuildProject": "../DataAccessLibary/DataAccessLibary.csproj"
     },
     "WebApiAngularIdentity/1.0.0": {
       "type": "project",

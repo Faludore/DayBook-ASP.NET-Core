@@ -17,8 +17,11 @@ using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using WebApiAngularIdentity.Fliters;
 using WebApiAngularIdentity.Middlewares;
-using WebApiAngularIdentity.Models;
+
 using WebApiAngularIdentity.Validators;
+
+using DataAccessLibary.DataAccess;
+using DataAccessLibary.Models;
 
 namespace WebApiAngularIdentity
 {
