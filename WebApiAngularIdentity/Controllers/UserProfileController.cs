@@ -17,6 +17,9 @@ using MailKit.Net.Smtp;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Net.Mail;
+using WebApiAngularIdentity.Services.TaskQueue;
+using WebApiAngularIdentity.Services;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace WebApiAngularIdentity.Controllers
 {
@@ -30,10 +33,13 @@ namespace WebApiAngularIdentity.Controllers
         private UserManager<ApplicationUser> _userManager;
         private AuthenticationContext _authenticationContext;
 
+        private readonly IServiceProvider _services;
+
         private static BlockingCollection<Mail> q = new BlockingCollection<Mail>();
 
-        public UserProfileController(UserManager<ApplicationUser> userManager, AuthenticationContext authenticationContext)
+        public UserProfileController(UserManager<ApplicationUser> userManager, AuthenticationContext authenticationContext, IServiceProvider services)
         {
+            _services = services;
             _userManager = userManager;
             _authenticationContext = authenticationContext;
             Run();
@@ -52,8 +58,10 @@ namespace WebApiAngularIdentity.Controllers
                 {
                     //prod-consum mail sender 
                     Mail mail = new Mail() { EmailFrom = AdminEmail, EmailTo = "some@gmail.com", Message = "highkhkny54t", DnT = DateTime.Now.ToString("dd/MM/yyyy") };
+
                     //Adding email to collection
-                    AddMail(mail);
+                    var monitorLoop = _services.GetRequiredService<MonitorLoop>();
+                    monitorLoop.StartMonitorLoop(mail);
 
                     Invite invite = new Invite() { Code = RandomCode(), Email = email, DnT = DateTime.Now.ToString("dd/MM/yyyy"), Status = "Active" };
                     try
@@ -127,44 +135,7 @@ namespace WebApiAngularIdentity.Controllers
         void SendMail(Mail model)
         {
 
-            var emailMessage = new MimeMessage();
-            emailMessage.From.Add(new MailboxAddress("Site admin", model.EmailFrom));
-            emailMessage.To.Add(new MailboxAddress("", model.EmailTo));
-            emailMessage.Subject = "Register on day book";
-            emailMessage.Body = new TextPart(MimeKit.Text.TextFormat.Html) { Text = model.Message };
-
-            using (var client = new MailKit.Net.Smtp.SmtpClient())
-            {
-                client.Connect("smtp.gmail.com", 587, false);
-                client.Authenticate(model.EmailFrom, AdminPassword);
-                try
-                {
-                    client.Send(emailMessage);
-                }
-                catch (SmtpFailedRecipientsException ex)
-                {
-                    for (int i = 0; i < ex.InnerExceptions.Length; i++)
-                    {
-                        System.Net.Mail.SmtpStatusCode status = ex.InnerExceptions[i].StatusCode;
-                        if (status == System.Net.Mail.SmtpStatusCode.MailboxBusy || status == System.Net.Mail.SmtpStatusCode.MailboxUnavailable)
-                        {
-                            
-                            System.Threading.Thread.Sleep(5000);
-                            client.Send(emailMessage);
-                            model.Status = false;
-                            AddMailToDB(model);                            
-                        }
-                        else
-                        {
-                            model.Status = false;
-                            AddMailToDB(model);
-                        }
-                    }
-                }
-                client.Disconnect(true);             
-            }
-            model.Status = true;
-            AddMailToDB(model);
+            
         }
         //add to db    
         void AddMailToDB(Mail mail)
