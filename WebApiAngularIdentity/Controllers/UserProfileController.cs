@@ -41,8 +41,7 @@ namespace WebApiAngularIdentity.Controllers
         {
             _services = services;
             _userManager = userManager;
-            _authenticationContext = authenticationContext;
-            Run();
+            _authenticationContext = authenticationContext;         
         }
 
         [HttpPost]
@@ -107,45 +106,5 @@ namespace WebApiAngularIdentity.Controllers
             else
                 return RandomCode();
         }
-
-        //--------------------producer-consumer--------------------------
-        //Adding Emails to collection
-        void AddMail(Mail mail)
-        {
-            q.Add(mail);
-        }
-        //producer
-        void Run()
-        {
-            var threads = new[] { new Thread(Consumer), new Thread(Consumer) };
-            foreach (var t in threads)
-                t.Start();          
-            foreach (var t in threads)
-                t.Join();
-        }
-
-        //consumer
-        void Consumer()
-        {
-            foreach (var s in q.GetConsumingEnumerable())
-            {              
-                SendMail(s);            
-            }
-        }
-        void SendMail(Mail model)
-        {
-
-            
-        }
-        //add to db    
-        void AddMailToDB(Mail mail)
-        {
-            using (_authenticationContext)
-            {
-                _authenticationContext.Mails.Add(mail);
-                _authenticationContext.SaveChanges();
-            }
-        }
-
     }
 }
