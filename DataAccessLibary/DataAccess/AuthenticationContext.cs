@@ -13,6 +13,7 @@ namespace DataAccessLibary.DataAccess
         public DbSet<ApplicationUser> ApplicationUsers { get; set; }
         public DbSet<Record> Records { get; set; }
         public DbSet<Invite> Invites { get; set; }
+        public DbSet<Mail> Mails { get; set; }
         public AuthenticationContext(DbContextOptions options) : base(options)
         {
 
