@@ -1,3 +1,6 @@
 {
-  "WorkersCount": 1
+  "AdminEmail": "justfortestsfaludore@gmail.com",
+  "AdminPassword": "TestForJust123",
+  "SmtpServer": "smtp.gmail.com",
+  "SmtpPost": "587"
 }

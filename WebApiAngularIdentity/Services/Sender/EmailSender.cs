@@ -4,17 +4,20 @@ using System.Linq;
 using System.Net.Mail;
 using System.Threading.Tasks;
 using DataAccessLibary.Models;
+using Microsoft.Extensions.Options;
 using MimeKit;
+using WebApiAngularIdentity.Settings;
 
 namespace WebApiAngularIdentity.Services.Sender
 {
     public class EmailSender : IEmailSender
     {
-        public static string AdminEmail = "justfortestsfaludore@gmail.com";
-        public static string AdminPassword = "TestForJust123";
+     
+        IOptions<Config> _config;
 
-        public EmailSender()
+        public EmailSender(IOptions<Config> config)
         {
+            _config = config;
         }
 
         public async Task Send(Email email)
@@ -27,8 +30,8 @@ namespace WebApiAngularIdentity.Services.Sender
 
             using (var client = new MailKit.Net.Smtp.SmtpClient())
             {
-                await client.ConnectAsync("smtp.gmail.com", 587, false);
-                await client.AuthenticateAsync(email.EmailFrom, AdminPassword);
+                await client.ConnectAsync(_config.Value.SmtpServer, _config.Value.SmtpPost, false);
+                await client.AuthenticateAsync(_config.Value.AdminEmail, _config.Value.AdminPassword);
                 try
                 {
                     await client.SendAsync(emailMessage);

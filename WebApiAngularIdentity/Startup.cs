@@ -26,6 +26,7 @@ using WebApiAngularIdentity.Services.TaskQueue;
 using WebApiAngularIdentity.Services;
 using WebApiAngularIdentity.Services.BackgroundTask;
 using WebApiAngularIdentity.Services.Sender;
+using WebApiAngularIdentity.Settings;
 
 namespace WebApiAngularIdentity
 {
@@ -88,6 +89,10 @@ namespace WebApiAngularIdentity
             services.AddHostedService<QueueService>();
             services.AddSingleton<IBackgroundQueue, BackgroundQueue>();
             services.AddSingleton<IEmailSender, EmailSender>();
+
+            //
+            services.AddOptions<Config>()
+            .Bind(Configuration.GetSection("config.json"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
