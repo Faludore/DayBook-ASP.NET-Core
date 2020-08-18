@@ -24,8 +24,8 @@ using DataAccessLibary.DataAccess;
 using DataAccessLibary.Models;
 using WebApiAngularIdentity.Services.TaskQueue;
 using WebApiAngularIdentity.Services;
-using WebApiAngularIdentity.Models;
-using WebApiAngularIdentity.Workers;
+using WebApiAngularIdentity.Services.BackgroundTask;
+using WebApiAngularIdentity.Services.Sender;
 
 namespace WebApiAngularIdentity
 {
@@ -84,15 +84,10 @@ namespace WebApiAngularIdentity
                 };
             });
 
-            ///p-c service
-            services.AddSingleton<MonitorLoop>();
-            services.AddHostedService<WorkerService>();
-
-            services.AddSingleton<Settings>();
-            services.AddSingleton<TaskProcessor>();
-            services.AddSingleton<IBackgroundTaskQueue, BackgroundTaskQueue>();
-                 
-
+            //p-c service
+            services.AddHostedService<QueueService>();
+            services.AddSingleton<IBackgroundQueue, BackgroundQueue>();
+            services.AddSingleton<IEmailSender, EmailSender>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

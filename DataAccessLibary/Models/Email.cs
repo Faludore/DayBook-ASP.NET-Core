@@ -4,7 +4,7 @@ using System.Text;
 
 namespace DataAccessLibary.Models
 {
-    public class Mail
+    public class Email
     {
         public int Id { get; set; }
         public string EmailFrom { get; set; }

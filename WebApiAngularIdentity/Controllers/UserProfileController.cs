@@ -1,25 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using DataAccessLibary.Models;
 using DataAccessLibary.DataAccess;
-
-using System.Collections.Concurrent;
-using MimeKit;
-using MailKit.Net.Smtp;
-using System.Threading;
-using System.Threading.Tasks;
-using System.Net.Mail;
 using WebApiAngularIdentity.Services.TaskQueue;
-using WebApiAngularIdentity.Services;
-using Microsoft.Extensions.DependencyInjection;
+using WebApiAngularIdentity.Services.Sender;
 
 namespace WebApiAngularIdentity.Controllers
 {
@@ -27,21 +17,21 @@ namespace WebApiAngularIdentity.Controllers
     [ApiController]
     public class UserProfileController : ControllerBase
     {
-        public static string AdminEmail = "justfortestsfaludore@gmail.com";
-        public static string AdminPassword = "TestForJust123";
-
         private UserManager<ApplicationUser> _userManager;
         private AuthenticationContext _authenticationContext;
+        private IBackgroundQueue _queue;
+        private IEmailSender _sender;
 
-        private readonly IServiceProvider _services;
-
-        private static BlockingCollection<Mail> q = new BlockingCollection<Mail>();
-
-        public UserProfileController(UserManager<ApplicationUser> userManager, AuthenticationContext authenticationContext, IServiceProvider services)
-        {
-            _services = services;
+        public UserProfileController(
+            UserManager<ApplicationUser> userManager, 
+            AuthenticationContext authenticationContext, 
+            IBackgroundQueue queue, 
+            IEmailSender sender)
+        {          
             _userManager = userManager;
-            _authenticationContext = authenticationContext;         
+            _authenticationContext = authenticationContext;
+            _queue = queue;
+            _sender = sender;
         }
 
         [HttpPost]
@@ -56,11 +46,13 @@ namespace WebApiAngularIdentity.Controllers
                 if (checkInvites.Count == 0)
                 {
                     //prod-consum mail sender 
-                    Mail mail = new Mail() { EmailFrom = AdminEmail, EmailTo = "some@gmail.com", Message = "highkhkny54t", DnT = DateTime.Now.ToString("dd/MM/yyyy") };
+                    Email emailToSend = new Email() { EmailFrom = "justfortestsfaludore@gmail.com", EmailTo = email, Message = "highkhkny54t", DnT = DateTime.Now.ToString("dd/MM/yyyy") };
 
                     //Adding email to collection
-                    var monitorLoop = _services.GetRequiredService<MonitorLoop>();
-                    monitorLoop.StartMonitorLoop(mail);
+                    _queue.QueueTask(async token =>
+                    {
+                        await _sender.Send(emailToSend);
+                    });
 
                     Invite invite = new Invite() { Code = RandomCode(), Email = email, DnT = DateTime.Now.ToString("dd/MM/yyyy"), Status = "Active" };
                     try
