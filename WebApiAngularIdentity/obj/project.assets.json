@@ -13508,6 +13508,7 @@
       },
       "frameworks": {
         "netcoreapp2.1": {
+          "targetAlias": "netcoreapp2.1",
           "projectReferences": {
             "D:\\ToWork\\vsProjects\\WebApiAngularIdentity\\DataAccessLibary\\DataAccessLibary.csproj": {
               "projectPath": "D:\\ToWork\\vsProjects\\WebApiAngularIdentity\\DataAccessLibary\\DataAccessLibary.csproj"
@@ -13523,6 +13524,7 @@
     },
     "frameworks": {
       "netcoreapp2.1": {
+        "targetAlias": "netcoreapp2.1",
         "dependencies": {
           "FluentValidation.AspNetCore": {
             "target": "Package",
@@ -13560,6 +13562,7 @@
             "version": "[2.1.2, )"
           },
           "Microsoft.NETCore.App": {
+            "suppressParent": "All",
             "target": "Package",
             "version": "[2.1.0, )",
             "autoReferenced": true
@@ -13574,10 +13577,16 @@
           }
         },
         "imports": [
-          "net461"
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
         ],
         "assetTargetFallback": true,
-        "warn": true
+        "warn": true,
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.205\\RuntimeIdentifierGraph.json"
       }
     }
   }

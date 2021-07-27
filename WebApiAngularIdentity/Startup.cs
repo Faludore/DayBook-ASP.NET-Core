@@ -112,8 +112,7 @@ namespace WebApiAngularIdentity
 
             app.UseAuthentication();
 
-            
-          
+
             app.UseMvc();        
         }
     }

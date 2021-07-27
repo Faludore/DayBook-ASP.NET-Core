@@ -11,8 +11,7 @@ using WebApiAngularIdentity.Settings;
 namespace WebApiAngularIdentity.Services.Sender
 {
     public class EmailSender : IEmailSender
-    {
-     
+    {  
         IOptions<Config> _config;
 
         public EmailSender(IOptions<Config> config)
